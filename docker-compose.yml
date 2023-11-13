@@ -1,0 +1,83 @@
+services:
+
+  # nginx
+  web:
+    image: tradeoverseer-web:latest
+    container_name: "tradeoverseer-web"
+    build:
+      context: ./frontend
+    restart: always
+    depends_on:
+      - app
+    ports:
+      - "443:443"
+      - "80:80"
+    networks:
+      - backbone
+
+  # database
+  db:
+    image: postgres:latest
+    container_name: "tradeoverseer-postgres"
+    restart: always
+    expose:
+      - 5432
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env
+    networks:
+      - backbone
+
+  # cache
+  redis:
+    image: redis:latest
+    container_name: "tradeoverseer-redis"
+    restart: always
+    command: --port 6379
+    expose:
+      - 6379
+    ports:
+      - "6379:6379"
+    networks:
+      - backbone
+
+  # backend
+  app:
+    image: tradeoverseer-backend:latest
+    container_name: "tradeoverseer-backend"
+    build:
+      context: ./backend
+    env_file:
+      - .env
+    ports:
+      - "8001:8001"
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - ./static:/static
+      - ./alembic:/alembic
+      - ./easyocr:/easyocr
+    networks:
+      - backbone
+
+  # database admin panel
+  adminer:
+    container_name: "tradeoverseer-adminer"
+    image: adminer
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8085:8080"
+    networks:
+      - backbone
+
+volumes:
+  postgres_data:
+  
+networks:
+  backbone:
+    name: backbone
+    driver: bridge
