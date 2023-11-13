@@ -1,0 +1,53 @@
+@import "../../../../../colors";
+@import "../../../../../weights";
+@import "../../../../../sizes";
+
+
+.container {
+  padding: 50px;
+  background-color: $dark-color;
+  border: 1px solid $white-color;
+  border-radius: 30px;
+
+  .heading {
+    font-size: $fs-desktop-card-heading;
+    font-weight: $fw-bold;
+    margin-bottom: 50px;
+  }
+
+  .form_field {
+    display: block;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 15px;
+    font-weight: $fw-bold;
+    font-size: $fs-desktop-card-button-text;
+    color: $dark-color;
+    background-color: $white-color;
+    padding: 15px 35px;
+    border-radius: 35px;
+  }
+}
+
+// MOBILE
+
+@media (max-width: 1250px) {
+  .container {
+    padding: 30px;
+    border-radius: 15px;
+
+    .heading {
+      font-size: $fs-mobile-card-heading;
+      margin-bottom: 30px;
+    }
+
+    button {
+      margin-top: 5px;
+      font-size: $fs-mobile-card-button-text;
+      padding: 10px 20px;
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,0 +1,173 @@
+<div class="container">
+  <!--  Header  -->
+  <header class="header">
+    <div class="header_logo"><a routerLink="/">TradeOverseer</a></div>
+    <nav class="header_menu">
+      <ul>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#about">О нас</a></li>
+      </ul>
+    </nav>
+    <div class="header_telegram" (click)="window.open('https://t.me/tradeoverseer_admin/', '_blank')">
+      <div class="header_telegram_icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="38" viewBox="0 0 37 38" fill="none">
+          <g clip-path="url(#clip0_6_248)">
+            <path
+              d="M18.5 0.59375C8.2827 0.59375 0 8.83448 0 19C0 29.1655 8.2827 37.4062 18.5 37.4062C28.7173 37.4062 37 29.1655 37 19C37 8.83448 28.7173 0.59375 18.5 0.59375ZM27.075 13.1115C26.7967 16.022 25.592 23.0849 24.9789 26.3447C24.7196 27.724 24.2089 28.1865 23.7146 28.2317C22.6404 28.3301 21.8245 27.5254 20.7839 26.8467C19.1557 25.7848 18.2359 25.1237 16.6553 24.0875C14.8288 22.89 16.0129 22.232 17.0538 21.1558C17.3262 20.8743 22.0598 16.5906 22.1514 16.202C22.1628 16.1534 22.1737 15.9719 22.0653 15.8767C21.9568 15.7814 21.7975 15.8136 21.6822 15.8395C21.519 15.8765 18.9178 17.587 13.8788 20.9712C13.1405 21.4756 12.4718 21.7213 11.8726 21.7085C11.212 21.6943 9.94144 21.3369 8.99682 21.0314C7.83826 20.6567 6.91743 20.4586 6.99763 19.8223C7.0394 19.4908 7.49817 19.1518 8.37394 18.8055C13.7671 16.4677 17.3633 14.9264 19.1627 14.1816C24.3003 12.0555 25.3679 11.6862 26.0637 11.6739C26.2168 11.6713 26.559 11.709 26.7806 11.888C26.928 12.0155 27.022 12.1933 27.0439 12.3864C27.0815 12.6262 27.0919 12.8694 27.075 13.1115Z"
+              fill="#FCFCFC"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_6_248">
+              <rect width="37" height="38" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div class="header_telegram_text">tradeoverseer_admin</div>
+    </div>
+  </header>
+
+  <!--  Main  -->
+  <main class="main">
+    <div class="main_heading_with_image">
+      <img class="main_heading_image" src="/assets/images/top-image.png" alt="Демонстрация работы сайта">
+      <div class="main_heading_section">
+        <div class="main_heading">Улучшите свой опыт трейдинга в <br><span
+          class="main_heading_gradient">Standoff 2</span>
+        </div>
+        <div class="main_subheading">Наш сайт поможет вам отслеживать цены на все предметы внутриигрового рынка и многое
+          другое.
+        </div>
+        <div class="main_buttons">
+          <a role="button" href="#prices" class="main_buttons_start_button">Начать</a>
+          <a role="button" href="#about" class="main_buttons_more_button">Узнать больше</a>
+        </div>
+      </div>
+    </div>
+    <div class="main_advantages">
+      <div class="main_advantages_card">
+        <div class="main_advantages_card_icon">
+          <mat-icon class="material-icons-round">candlestick_chart</mat-icon>
+        </div>
+        <div class="main_advantages_card_heading">Аналитика</div>
+        <div class="main_advantages_card_text">Подробная информация об истории цен на предметы.</div>
+      </div>
+      <div class="main_advantages_card">
+        <div class="main_advantages_card_icon">
+          <mat-icon class="material-icons-round">business_center</mat-icon>
+        </div>
+        <div class="main_advantages_card_heading">Инвентарь</div>
+        <div class="main_advantages_card_text">Вы можете выбрать нужные предметы для удобного отслеживания общего
+          роста.
+        </div>
+      </div>
+      <div class="main_advantages_card">
+        <div class="main_advantages_card_icon">
+          <mat-icon class="material-icons-round">construction</mat-icon>
+        </div>
+        <div class="main_advantages_card_heading">Лучший инструмент</div>
+        <div class="main_advantages_card_text">С нами вы станете про.</div>
+      </div>
+    </div>
+    <div class="main_slogan" id="about">Мы — команда опытных трейдеров, которые создали инструмент для заработка на
+      рынке.
+    </div>
+    <img src="/assets/images/main-image.png" alt="Основное изображение">
+    <div class="main_prices" id="prices">
+      <div class="main_prices_heading">Стоимость подписки</div>
+      <div class="main_prices_subheading">Мы предлагаем отличные условия для комфортного и продуктивного трейдинга.
+      </div>
+      <div class="main_prices_cards">
+        <div class="main_prices_card">
+          <div class="main_prices_card_heading">FREE</div>
+          <div class="main_prices_card_subheading">Бесплатная пробная версия</div>
+          <div class="main_prices_card_line"></div>
+          <div class="main_prices_card_advantages">
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              История цен предметов
+            </div>
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Техническая поддержка
+            </div>
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_warning_icon">warning</mat-icon>
+              Без возможности продлить
+            </div>
+          </div>
+          <div class="main_prices_card_price_with_button">
+            <div class="main_prices_card_price">₽0 <span class="main_prices_card_price_period">/неделю</span></div>
+            <button class="main_prices_card_button" (click)="showOrderDialog('free')">Попробовать</button>
+          </div>
+        </div>
+        <div class="main_prices_card">
+          <div class="main_prices_card_heading">Premium</div>
+          <div class="main_prices_card_subheading">Расширенный доступ</div>
+          <div class="main_prices_card_line"></div>
+          <div class="main_prices_card_advantages">
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Удобная сортировка
+            </div>
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Личный инвентарь
+            </div>
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Закрытый чат коммьюнити
+            </div>
+          </div>
+          <div class="main_prices_card_price_with_button">
+            <div class="main_prices_card_price">₽499 <span class="main_prices_card_price_period">/месяц</span></div>
+            <button class="main_prices_card_button" (click)="showOrderDialog('premium')">Купить</button>
+          </div>
+        </div>
+        <div class="main_prices_card">
+          <div class="main_prices_card_heading">Ultimate</div>
+          <div class="main_prices_card_subheading">Полный доступ</div>
+          <div class="main_prices_card_line"></div>
+          <div class="main_prices_card_advantages">
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Все функции сайта
+            </div>
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Ранний доступ к обновлениям
+            </div>
+            <div class="main_prices_card_advantages_point">
+              <mat-icon class="material-icons-round main_prices_card_advantages_point_icon">done</mat-icon>
+              Общение с разработчиками
+            </div>
+          </div>
+          <div class="main_prices_card_price_with_button">
+            <div class="main_prices_card_price">₽1499 <span class="main_prices_card_price_period">/месяц</span></div>
+            <button class="main_prices_card_button" (click)="showOrderDialog('ultimate')">Купить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--  Footer  -->
+  <div class="footer_line"></div>
+  <footer class="footer">
+    <div class="footer_logo">© 2023 TradeOverseer</div>
+    <nav class="footer_menu">
+      <ul>
+        <li><a href="#prices">Цены</a></li>
+        <li><a href="#about">О нас</a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
+
+<!--  Glow spots  -->
+<div class="glow_spots">
+  <div class="glow_spot" id="glow_spot_1"></div>
+  <div class="glow_spot" id="glow_spot_2"></div>
+  <div class="glow_spot" id="glow_spot_3"></div>
+  <div class="glow_spot" id="glow_spot_4"></div>
+</div>

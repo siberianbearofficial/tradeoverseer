@@ -1,0 +1,655 @@
+@import "../../../../colors";
+@import "../../../../sizes";
+@import "../../../../weights";
+
+
+$menu-gap: 100px;
+
+.container {
+  padding: $desktop-vertical-padding $desktop-horizontal-padding;
+}
+
+.glow_spots {
+  width: 100%;
+  height: 4250px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: clip;
+}
+
+.glow_spot {
+  position: absolute;
+}
+
+#glow_spot_1 {
+  top: 350px;
+  left: 100px;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 1000px;
+  background: radial-gradient(42.60% 42.60% at 50.00% 50.00%, rgba(59, 183, 234, 0.20) 0%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+#glow_spot_2 {
+  top: 1000px;
+  left: -600px;
+  width: 1750px;
+  height: 1750px;
+  border-radius: 1750px;
+  background: radial-gradient(42.60% 42.60% at 50.00% 50.00%, rgba(39, 225, 194, 0.20) 0%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+#glow_spot_3 {
+  top: 2800px;
+  right: -800px;
+  width: 1500px;
+  height: 1500px;
+  border-radius: 1500px;
+  background: radial-gradient(42.60% 42.60% at 50.00% 50.00%, rgba(59, 183, 234, 0.20) 0%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+#glow_spot_4 {
+  top: -150px;
+  left: -500px;
+  width: 1000px;
+  height: 1000px;
+  border-radius: 1000px;
+  background: radial-gradient(42.60% 42.60% at 50.00% 50.00%, rgba(39, 225, 194, 0.20) 0%, rgba(217, 217, 217, 0.00) 100%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .header_logo a {
+    font-size: $fs-desktop-header-logo;
+    font-weight: $fw-bold;
+  }
+
+  .header_menu {
+    font-size: $fs-desktop-menu;
+
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: $menu-gap;
+
+      li {
+        display: block;
+      }
+
+      li a:hover {
+        color: $light-color;
+      }
+    }
+  }
+
+  .header_telegram {
+    font-size: $fs-desktop-menu;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+    .header_telegram_icon {
+      display: flex;
+    }
+
+    .header_telegram_text {
+
+    }
+  }
+}
+
+.main {
+  .main_heading_with_image {
+    margin-top: 100px;
+    margin-left: -$desktop-horizontal-padding;
+    display: flex;
+    gap: 50px;
+
+    .main_heading_image {
+      width: 40%;
+      height: auto;
+    }
+
+    .main_heading_section {
+      text-align: right;
+
+      .main_heading {
+        font-size: $fs-desktop-heading;
+        font-weight: $fw-bold;
+        letter-spacing: $ls-heading;
+
+        .main_heading_gradient {
+          background: linear-gradient(109deg, $accent-color 0.01%, $blue-color 100%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .main_subheading {
+        margin-top: 30px;
+        color: $light-color;
+        font-size: $fs-desktop-subheading;
+        font-weight: $fw-regular;
+      }
+
+      .main_buttons {
+        margin-top: 50px;
+        justify-content: right;
+        display: flex;
+        gap: 15px;
+
+        a {
+          font-size: $fs-desktop-button-text;
+          font-weight: $fw-bold;
+          padding: 15px 35px;
+          border-radius: 35px;
+        }
+
+        .main_buttons_start_button {
+          background-color: $white-color;
+          color: $dark-color;
+        }
+
+        .main_buttons_start_button:hover {
+          background-color: $light-color;
+        }
+
+        .main_buttons_more_button {
+          border: 2px solid $white-color;
+          color: $white-color;
+        }
+
+        .main_buttons_more_button:hover {
+          background-color: $white-color;
+          color: $dark-color;
+        }
+      }
+    }
+  }
+
+  .main_advantages {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 50px;
+
+    .main_advantages_card {
+      padding: 50px;
+      border: 1px solid $light-color;
+      border-radius: 30px;
+
+      .main_advantages_card_icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 140px;
+        background-color: $dark-grey-color;
+        border-radius: 20px;
+
+        mat-icon {
+          width: 64px;
+          height: 64px;
+          font-size: 64px;
+          line-height: normal;
+        }
+      }
+
+      .main_advantages_card_heading {
+        margin-top: 40px;
+        font-size: $fs-desktop-card-heading;
+        font-weight: $fw-bold;
+      }
+
+      .main_advantages_card_text {
+        margin-top: 20px;
+        font-size: $fs-desktop-card-subheading;
+        color: $light-color;
+      }
+    }
+  }
+
+  .main_slogan {
+    margin-top: 300px;
+    margin-bottom: 50px;
+    font-size: $fs-desktop-heading;
+    font-weight: $fw-bold;
+    letter-spacing: $ls-heading;
+    background: linear-gradient(142deg, #27E1C2 0.01%, #3DB4ED 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .main_prices {
+    margin-top: 200px;
+
+    .main_prices_heading {
+      font-size: $fs-desktop-heading-sm;
+      font-weight: $fw-bold;
+      letter-spacing: $ls-heading-sm;
+    }
+
+    .main_prices_subheading {
+      margin-top: 50px;
+      color: $light-color;
+      font-size: $fs-desktop-subheading;
+    }
+
+    .main_prices_cards {
+      margin-top: 100px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      grid-gap: 50px;
+
+      .main_prices_card {
+        padding: 50px;
+        border: 1px solid $light-color;
+        border-radius: 30px;
+
+        .main_prices_card_heading {
+          font-size: $fs-desktop-card-heading;
+          font-weight: $fw-bold;
+        }
+
+        .main_prices_card_subheading {
+          margin-top: 10px;
+          font-size: $fs-desktop-card-subheading;
+          color: $light-color;
+        }
+
+        .main_prices_card_line {
+          margin-top: 30px;
+          height: 1px;
+          width: 100%;
+          background-color: $dark-grey-color;
+        }
+
+        .main_prices_card_advantages {
+          margin-top: 30px;
+
+          .main_prices_card_advantages_point {
+            margin-bottom: 15px;
+            font-size: $fs-desktop-card-subheading;
+            display: flex;
+            gap: 10px;
+
+            .main_prices_card_advantages_point_icon {
+              color: $accent-color;
+            }
+
+            .main_prices_card_advantages_point_warning_icon {
+              color: $red-color;
+            }
+          }
+        }
+
+        .main_prices_card_price {
+          margin-top: 30px;
+          font-size: $fs-desktop-card-heading;
+          font-weight: $fw-bold;
+
+          .main_prices_card_price_period {
+            font-weight: $fw-regular;
+            font-size: $fs-desktop-card-subheading;
+            color: $light-color;
+          }
+        }
+
+        .main_prices_card_button {
+          margin-top: 30px;
+          font-size: $fs-desktop-card-button-text;
+          font-weight: $fw-bold;
+          padding: 15px 35px;
+          border-radius: 35px;
+          text-align: center;
+          background-color: $white-color;
+          color: $dark-color;
+        }
+      }
+
+
+      .main_prices_card:hover {
+        border: 1px solid transparent;
+        background: linear-gradient(138deg, #27E1C2 0.01%, #3DB4ED 100%);
+
+        .main_prices_card_heading {
+          color: $dark-color;
+        }
+
+        .main_prices_card_subheading {
+          color: $dark-color;
+        }
+
+        .main_prices_card_line {
+          background-color: $dark-grey-color;
+        }
+
+        .main_prices_card_advantages {
+          .main_prices_card_advantages_point {
+            color: $dark-color;
+
+            .main_prices_card_advantages_point_icon {
+              color: $dark-color;
+            }
+
+            .main_prices_card_advantages_point_warning_icon {
+              color: $red-color;
+            }
+          }
+        }
+
+        .main_prices_card_price {
+          color: $dark-color;
+
+          .main_prices_card_price_period {
+            color: $dark-color;
+          }
+        }
+
+        .main_prices_card_button {
+          background-color: $dark-color;
+          color: $white-color;
+        }
+      }
+    }
+  }
+}
+
+.footer_line {
+  margin-top: 100px;
+  height: 1px;
+  width: 100%;
+  background-color: $light-color;
+}
+
+.footer {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+
+  .footer_logo {
+    font-size: $fs-desktop-footer-logo;
+    font-weight: $fw-bold;
+    letter-spacing: $ls-footer-logo;
+  }
+
+  .footer_menu {
+    font-size: $fs-desktop-menu;
+
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: $menu-gap;
+
+      li {
+        display: block;
+      }
+
+      li a:hover {
+        color: $light-color;
+      }
+    }
+  }
+}
+
+// MOBILE
+
+@media (max-width: 1250px) {
+  .container {
+    padding: $mobile-vertical-padding $mobile-horizontal-padding;
+  }
+
+  .glow_spots {
+    height: 3500px;
+  }
+
+  #glow_spot_1 {
+    top: -100px;
+    right: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
+  }
+
+  #glow_spot_2 {
+    top: 1300px;
+    left: -500px;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 1000px;
+  }
+
+  #glow_spot_3 {
+    top: 3000px;
+    right: -400px;
+    width: 600px;
+    height: 600px;
+    border-radius: 600px;
+  }
+
+  #glow_spot_4 {
+    display: none;
+  }
+
+  .header {
+    align-items: center;
+
+    .header_logo a {
+      font-size: $fs-mobile-header-logo;
+    }
+
+    .header_menu {
+      display: none;
+    }
+
+    .header_telegram {
+      font-size: $fs-mobile-menu;
+
+      .header_telegram_icon {
+        display: flex;
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .header_telegram_text {
+        display: none;
+      }
+    }
+  }
+
+  .main {
+    .main_heading_with_image {
+      flex-direction: column-reverse;
+      margin-left: 0;
+      margin-top: 50px;
+
+      .main_heading_image {
+        width: 100%;
+        margin-left: -$mobile-horizontal-padding;
+      }
+
+      .main_heading_section {
+        text-align: left;
+
+        .main_heading {
+          width: 100%;
+          font-size: $fs-mobile-heading;
+        }
+
+        .main_subheading {
+          width: 100%;
+          margin-top: 15px;
+          font-size: $fs-mobile-subheading;
+        }
+
+        .main_buttons {
+          justify-content: left;
+          margin-top: 30px;
+          display: flex;
+          gap: 15px;
+
+          a {
+            font-size: $fs-mobile-button-text;
+            padding: 10px 30px;
+            border-radius: 15px;
+          }
+
+          .main_buttons_more_button {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .main_advantages {
+      margin-top: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-gap: 20px;
+
+      .main_advantages_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 50px;
+
+        .main_advantages_card_icon {
+          width: 80px;
+          height: 80px;
+
+          mat-icon {
+            width: 45px;
+            height: 45px;
+            font-size: 45px;
+          }
+        }
+
+        .main_advantages_card_heading {
+          margin-top: 20px;
+          font-size: $fs-mobile-card-heading;
+        }
+
+        .main_advantages_card_text {
+          text-align: center;
+          margin-top: 20px;
+          font-size: $fs-mobile-card-subheading;
+        }
+      }
+    }
+
+    .main_slogan {
+      margin-top: 100px;
+      font-size: $fs-mobile-heading;
+    }
+
+    .main_prices {
+      margin-top: 100px;
+
+      .main_prices_heading {
+        text-align: center;
+        font-size: $fs-mobile-heading-sm;
+      }
+
+      .main_prices_subheading {
+        text-align: center;
+        margin-top: 30px;
+        font-size: $fs-mobile-subheading;
+      }
+
+      .main_prices_cards {
+        margin-top: 50px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-gap: 20px;
+
+        .main_prices_card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 35px;
+
+          .main_prices_card_heading {
+            font-size: $fs-mobile-card-heading;
+          }
+
+          .main_prices_card_subheading {
+            margin-top: 10px;
+            font-size: $fs-mobile-card-subheading;
+          }
+
+          .main_prices_card_line {
+            margin-top: 30px;
+          }
+
+          .main_prices_card_advantages {
+            margin-top: 30px;
+
+            .main_prices_card_advantages_point {
+              align-items: center;
+              font-size: $fs-mobile-card-subheading;
+              margin-bottom: 15px;
+              gap: 10px;
+            }
+          }
+
+          .main_prices_card_price {
+            margin: 0;
+            font-size: $fs-mobile-card-heading;
+
+            .main_prices_card_price_period {
+              font-size: $fs-mobile-card-subheading;
+            }
+          }
+
+          .main_prices_card_price_with_button {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+
+          .main_prices_card_button {
+            margin: 0;
+            font-size: $fs-mobile-card-button-text;
+            padding: 10px 20px;
+            border-radius: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer_line {
+    margin-top: 50px;
+  }
+
+  .footer {
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+
+    .footer_logo {
+      font-size: $fs-mobile-footer-logo;
+    }
+
+    .footer_menu {
+      display: none;
+    }
+  }
+}

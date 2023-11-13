@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="heading">Как с вами связаться?</div>
+  <mat-form-field class="form_field">
+    <mat-label>Удобный способ</mat-label>
+    <mat-select [(ngModel)]="method">
+      <mat-option [value]="'telegram'">Telegram</mat-option>
+      <mat-option [value]="'whatsapp'">WhatsApp</mat-option>
+      <mat-option [value]="'discord'">Discord</mat-option>
+      <mat-option [value]="'vk'">VK</mat-option>
+      <mat-option [value]="'email'">Email</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="form_field">
+    <mat-label>Ваш ник, номер телефона, email-адрес, пр.</mat-label>
+    <input matInput placeholder="@tradeoverseer_admin" [(ngModel)]="contact">
+  </mat-form-field>
+
+  <button (click)="close()">Отправить</button>
+</div>
